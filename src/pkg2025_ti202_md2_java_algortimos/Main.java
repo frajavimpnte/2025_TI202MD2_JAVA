@@ -1,0 +1,20 @@
+/*
+ * ITESS-TICS-MATEMATICAS DISCRETAS II
+ * PERIODO: ENERO JUNIO 2025
+ * GRUPO: TI-202
+ * DOCENTE: FRANCISCO JAVIER MONTECILLO PUENTE
+ * DESPCRICION: ALGORITMOS DE MATEMATICAS DISCRETAS II
+ * PROGRRAMADOR: FRANCISCO JAVIER MONTECILLO PUENTE
+ * FECHA 17/FEBRERO/2025
+ */
+package pkg2025_ti202_md2_java_algortimos;
+
+
+public class Main {
+
+  
+    public static void main(String[] args) {
+        
+    }
+    
+}
