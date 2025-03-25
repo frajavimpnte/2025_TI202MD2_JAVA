@@ -45,6 +45,15 @@ public class GrafoCPrueba {
         
         System.out.println("gradoTotal de g3 = " + g3.gradoTotal());
         
+        System.out.println("GRAFO PONDERADO=====================");
+        int[] vG4 = {1,2,3,4,5,6};
+        int[][] eG4 = {{1,2}, {1,3}, {2,4}, {2,5}, {3,5}, {4,5}, {4,6}, {5,6}};
+        int[]  wG4 = {3, 4, 6, 5, 1, 2, 7, 12};
+        GrafoC g4 = new GrafoC(vG4, eG4, wG4);
         
+        System.out.println(g4.toString());
+        
+        g4.dijkstra(1,6);
     }
 }
+ 
