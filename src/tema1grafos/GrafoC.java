@@ -125,7 +125,8 @@ public class GrafoC {
            T.agregarVertice(a);
            System.out.println("T:" + T.toString());
            
-           // hacer el paso 2. L
+           // Hacer el paso 2. L, considerar indice 0 corresponde a
+           // vertice 1
            List<Integer> L = new ArrayList<>();
            L.add(0);  // 0  -> v1,  1 -> v2, 2 -> v3
            for (int i = 1; i < this.v.size(); i++)
@@ -137,13 +138,46 @@ public class GrafoC {
            
            HashSet<Integer> F = new HashSet<>();
            F.add(a);
+           System.out.println("F:" + F.toString());
           
            // paso 4. while ( z no pertenece a V(T) )
-           while (! T.v.contains(z) ) {
-               
-           }        
+           //System.out.println("Vertices adjacentes:");
+           //verticesAdyacentes(v);
+           //while (! T.v.contains(z) ) {  
+               // 4a. F = (F - {v}) U { vertices adyacentes a v y no estan en V(T)}
+               List<Integer> adyacentes = new ArrayList();
+               for (List<Integer> arista: e)  {
+                   if (arista.get(0) == v  && !T.v.contains(arista.get(1))) {
+                        //System.out.print(arista.get(1) + " ");
+                        adyacentes.add(arista.get(1));
+                    }
+                     if (arista.get(1) == v && !T.v.contains(arista.get(0))) {
+                        //System.out.print(arista.get(0) + " ");
+                        adyacentes.add(arista.get(0));
+                    }
+               }
+               System.out.println("adyacentes: " + adyacentes);
+           //}        
            // resultado
     }
+    
+    private void verticesAdyacentes(int v) {
+        // recorrer todas las aristas
+        for (List<Integer> arista: e)  {
+            //System.out.print(arista.toString() + " ");
+            // checar si v es para de la arista
+            if (arista.get(0) == v) {
+                 System.out.print(arista.get(1) + " ");
+            }
+            if (arista.get(1) == v) {
+                 System.out.print(arista.get(0) + " ");
+            }
+            //    si es parte el otro vertice es adyacente
+        }
+        System.out.println("");
+        
+    }
+    
     @Override
     public String toString() {
         return "GrafoC{" + "v=" + v.toString() + ", e=" + e.toString() + '}';
