@@ -7,5 +7,7 @@ Para ver el contenido cambiar a la rama master
 [master repository] (https://github.com/frajavimpnte/2025_TI202MD2_JAVA/tree/master)
 
 Contenido 
-tema1: grafos
-tema2: arboles
+
+1.  grafos
+2.  arboles
+3.  otros (test, uso hash, uso de pakcages)
